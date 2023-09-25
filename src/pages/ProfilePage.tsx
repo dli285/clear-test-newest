@@ -1,4 +1,5 @@
 import { Incomes } from "../components/ProfileElems/Incomes";
+import React, {useState} from "react";
 import { MyCards } from "../components/ProfileElems/MyCards";
 import {
   SCUserInfoBlock,
@@ -10,6 +11,9 @@ import { UserBio } from "../components/ProfileElems/UserBio";
 import { PageElemsWrapper } from "../theme/globalStyle";
 
 export const ProfilePage = () => {
+  const [isModalOpen, toggleModal] = useState<boolean>(false)
+  
+  
   return (
     <>
       <h1>Личный кабинет</h1>

@@ -1,10 +1,14 @@
+import { mapUserDataFields } from "../../utils/mapUserData";
 import { AppElem } from "../AppElem/AppElem";
 import { userData } from "./ProfileElems.data";
 import { SCUserBio } from "./ProfileElems.style";
+import { UserBioItem } from "./UserBioItem";
 
 interface IUserBioProps {}
 
 export const UserBio = ({}: IUserBioProps) => {
+  const fields = mapUserDataFields()
+
   return (
     <SCUserBio>
       <AppElem
@@ -13,26 +17,12 @@ export const UserBio = ({}: IUserBioProps) => {
         elemStatus={userData.status}
       />
       <div className="userBio">
-        <div className="userInfo">
-          <p className="secondaryText info">Фамилия:</p>
-          <p className="value">{userData.surname}</p>
-        </div>
-        <div className="userInfo">
-          <p className="secondaryText info">Имя:</p>
-          <p className="value">{userData.name}</p>
-        </div>
-        <div className="userInfo">
-          <p className="secondaryText info">Номер:</p>
-          <p className="value">{userData.phoneNumber}</p>
-        </div>
-        <div className="userInfo">
-          <p className="secondaryText info">E-mail:</p>
-          <p className="value">{userData.eMail}</p>
-        </div>
-        <div className="userInfo">
-          <p className="secondaryText info">Страна:</p>
-          <p className="value">{userData.country}</p>
-        </div>
+        {fields.map(field => (
+          <UserBioItem
+            key={field.fieldName}
+            fieldName={field.fieldName}
+            fieldValue={field.fieldValue}/> 
+        ))}
       </div>
     </SCUserBio>
   );

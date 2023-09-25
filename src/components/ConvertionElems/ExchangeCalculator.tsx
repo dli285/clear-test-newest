@@ -12,6 +12,7 @@ export const ExchangeCalculator = ({}: IExchangeCalculatorProps) => {
   return (
     <CalculatorWrapper>
       <h1>Калькулятор</h1>
+      {/* TODO: сделать перевод курса */}
       <SCExchangeCalculator>
         <div className="wannaSell">
           <h5>Хочу продать</h5>

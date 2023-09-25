@@ -33,6 +33,7 @@ export const Header = () => {
             width="22"
             borderRadius="50%"
           />
+          {/* TODO: Заменить на REACT-drodown */}
           <AppSelect variants={appLanguages} />
         </div>
         <AppElem elemImg="users/usachev.jpeg" elemName="Дмитрий Усачев" />
