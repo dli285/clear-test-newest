@@ -13,7 +13,6 @@ import { PageElemsWrapper } from "../theme/globalStyle";
 export const ProfilePage = () => {
   const [isModalOpen, toggleModal] = useState<boolean>(false)
   
-  
   return (
     <>
       <h1>Личный кабинет</h1>

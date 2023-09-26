@@ -52,7 +52,8 @@ export const AppModal = ({ modalIsOpen, closeModal, onAddCard, onCommentCardName
             isOpen={modalIsOpen}
             onRequestClose={closeModal}
             style={customStyles}
-            contentLabel="Add comments">
+            contentLabel="Add comments"
+            >
             <button onClick={closeModal}>close</button>
             <div>Add comments</div>
             <form>
@@ -69,7 +70,7 @@ export const AppModal = ({ modalIsOpen, closeModal, onAddCard, onCommentCardName
                     control={control}
                     render={({}) => <AppInput
                         type="text"
-                        errorMessage="Not Available name"
+                        errorMessage={errors.username?.message}
                         onChange={onCommentCardUsernameChange}
                     />} />
                 <AppButton
