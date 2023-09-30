@@ -32,8 +32,8 @@ export const AppInput = ({
         disabled={isDisabled}
         {...props}
       />
-      {hasError && <p className="errorMessage">{errorMessage}</p>}
-      {iconName && <AppIcon className="inputIcon" name={iconName} />}
+      {hasError && <p className="errorMessage" data-testId="error-message">{errorMessage}</p>}
+      {iconName && <AppIcon className="inputIcon" data-testId="error-icon" name={iconName}/>}
     </InputWrapper>
   );
 };

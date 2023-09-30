@@ -27,8 +27,8 @@ const StyledSVGIcon = styled(ReactSVG)<ISVG>`
         stroke: ${props.stroke};
       `};
 
-    width: ${(props) => props.width || props.theme.spacing.space.m}px;
-    height: ${(props) => props.height || props.theme.spacing.space.m}px;
+    width: ${(props) => props.width || props.theme.spacing?.space.m}px;
+    height: ${(props) => props.height || props.theme.spacing?.space.m}px;
     ${(props) =>
       props.transform &&
       css`
