@@ -224,18 +224,18 @@ export const SCTransfersTable = styled.div`
   }
 `;
 
-export const SCOperationBadge = styled.div<{ operationStatus: string }>`
+export const SCOperationBadge = styled.div<{ $operationStatus: string }>`
   border-radius: 50px;
   padding: 5px 10px;
   color: white;
   background-color: #000;
 
   background-color: ${(props) =>
-    props.operationStatus === "done"
+    props.$operationStatus === "done"
       ? props.theme.colors.green
-      : props.operationStatus === "in-process"
+      : props.$operationStatus === "in-process"
       ? props.theme.colors.primeColor
-      : props.operationStatus === "cancel"
+      : props.$operationStatus === "cancel"
       ? props.theme.colors.red
       : "black"};
 

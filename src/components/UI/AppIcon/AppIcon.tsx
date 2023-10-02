@@ -83,7 +83,7 @@ export const AppIcon: React.FC<IIcon> = ({
       height={height}
       transform={transform}
       wrapper="span"
-      data-testid="icon"
+      $data-testid="icon"
       stroke={stroke}
       onClick={onClick}
       {...props}

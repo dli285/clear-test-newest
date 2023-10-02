@@ -6,7 +6,7 @@ interface IAppSelectProps {
 
 export const AppSelect = ({ variants }: IAppSelectProps) => {
   return (
-    <SCSelect data-testId="appLanguage" name="appLanguage" id="appLanguage">
+    <SCSelect $data-testId="appLanguage" name="appLanguage" id="appLanguage">
       {variants.map((variant) => (
         <option key={variant.value} value={variant.value}>
           {variant.title}

@@ -11,7 +11,7 @@ export const OperationStatusBadge = ({
   return (
     <SCOperationBadge
       className="OperationBadge"
-      operationStatus={operationStatus}
+      $operationStatus={operationStatus}
     >
       <AppIcon width="16" className="operationIcon" name={operationStatus} />
       <span className="operationStatusName">
